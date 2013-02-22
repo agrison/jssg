@@ -1,0 +1,9 @@
+---
+title: My awesome webpage
+layout: index
+description: Home page
+---
+
+h2. Welcome
+
+Welcome to my personal web site. You will find some great stuff here.

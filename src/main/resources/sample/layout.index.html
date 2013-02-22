@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to my website</title>
+</head>
+<body>
+<div class="content">
+    ${content}
+
+    <h2>Blog posts</h2>
+    <ul>
+        <#assign blogPosts = posts?sort_by("date")>
+            <#foreach post in blogPosts?reverse>
+                <li><span class="date">${post.date?date?string.medium}</span> &mdash; <a href="${post.url}">${post.title}</a></li>
+            </#foreach>
+    </ul>
+</div>
+</body>
+</html>

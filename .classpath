@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java"/>
+	<classpathentry kind="src" path="src/main/resources"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5"/>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER"/>
+	<classpathentry kind="lib" path="libs/markdown4j-1.1.jar"/>
+	<classpathentry kind="lib" path="libs/com.fasterxml.jackson.annotation.jar"/>
+	<classpathentry kind="lib" path="libs/com.fasterxml.jackson.databind.jar"/>
+	<classpathentry kind="lib" path="libs/com.fasterxml.jackson.jar"/>
+	<classpathentry kind="lib" path="libs/com.threecrickets.jygments.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
