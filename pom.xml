@@ -6,6 +6,13 @@
   <packaging>jar</packaging>
   <name>jssg</name>
   <url>http://www.grison.me/jssg/</url>
+  <developers>
+	<developer>
+		<id>grisonal</id>
+		<name>Alexandre Grison</name>
+		<email>a.grison@gmail.com</name>
+	</developer>
+  </developers>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
