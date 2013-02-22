@@ -5,7 +5,7 @@
   <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <name>jssg</name>
-  <url>http://www.grison.me/projects/jssg/</url>
+  <url>http://www.grison.me/jssg/</url>
   
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
