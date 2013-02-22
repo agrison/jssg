@@ -18,7 +18,7 @@ To get a copy of **jssg** just clone the git repository and `mvn package`.
 
 ### Init
 
-To create a default site structure, just call `jssg init`.
+To create a default site structure, just call `jssg -init`.
 
     $ mkdir myblog
     $ cd myblog
@@ -42,7 +42,7 @@ You can edit some of the properties in the `config.properties` file, for instanc
 
 ### Write content
 
-With the `jssg -init` command you have already a default index page and blog post, but you can add more if you want.
+With the `jssg -init` command you have already a default index page and a first blog post, but you can add more if you want.
 
     $ cat <<EOF > _posts/2011-10-29-Hello.mkd
     ---
@@ -70,11 +70,11 @@ Write an about page.
 
     h2. About
 
-    I'm what's up in New York.
+    I'm what's up New York.
 
 ### Create your layout
 
-If you need to customize the layouts, they are located in `_layouts`, below are two commandes that show what are the defaults
+If you need to customize the layouts, the files are located in `_layouts`, below are two commands that shows what are the defaults
 bundled in the sample.
 
     $ cat <<EOF > _layout/blog.html
@@ -156,7 +156,7 @@ Run the command `jssg -build -serve` to generate the whole site, then browse the
         + Processing 2011-10-29-Hello.markdown...
 
     Looking for pages in ./
-      About to process 1 files
+      About to process 1 file
         + Processing index.textile...
 
     Site generated in 0.50 sec
@@ -173,30 +173,30 @@ Run the command `jssg -build -serve` to generate the whole site, then browse the
 
     $ open http://localhost:9876
 
-When you run `jssg` with the `serve` argument, it rebuild any post or static page that you modify when it notices it,
+When you run `jssg` with the `-serve` argument, it rebuilds any post or static page that you modify when it notices it,
 so that you just have to refresh your browser.
 
 ## How it works
 
 Invoking `jssg -build` will build the website by doing specific tasks:
 
-* Scan the _posts/ directory for each file having the pattern yyyy-MM-dd-.something.(markdown|textile)
+* Scan the `_posts/` directory for each file having the pattern `yyyy-MM-dd-something.(mkd|markdown|textile)`
     * Detect code snippets (if any)
     * Generate the HTML markup equivalent for the `Markdown` or `Textile` file content
     * Highlight code snippets with (`Jygments` / `Pygments`)
     * Merge the HTML into the layout found in the `_layout/` directory using Freemarker
     * Write the whole content in `_build/yyyy/MM/dd/something`
-* Scan the current directory for each file having the mkd|markdown|textile extension
+* Scan the current directory for each file having the `mkd|markdown|textile` extension
     * Do exactly the same as above
-* Copy everything that is in the current directory that has not already been processed into the _build/ directory.
+* Copy everything that is in the current directory that has not already been processed into the `_build/` directory.
 
 All these tasks are being executed automatically and takes just seconds.
 
 ## Dependencies
 
-`Jssg` supports code snippets higlighting through `Pygments`, so it should be in your `PATH` or you may set the path to it in the `config.properties` file.
+**Jssg** supports code snippets higlighting through `Pygments`, so it should be in your `PATH` or you may set the path to it in the `config.properties` file.
 
-Jssg is packaged as only one big fat JAR which includes all its dependencies. 
+**Jssg** is packaged as only one big fat JAR which includes all its dependencies.
 These dependencies are resolved through Maven or via the `libs` directory bundled with the source code:
 
 * Spring
