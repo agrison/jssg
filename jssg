@@ -1,1 +1,5 @@
-java -jar jssg-1.0.0-SNAPSHOT.jar $*
+# cd to this script's directory
+cd `dirname $0`
+
+# to relative path to target/ work from everywhere
+java -jar target/jssg-1.0.0-SNAPSHOT.jar $*
