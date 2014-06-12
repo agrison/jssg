@@ -107,7 +107,7 @@ public class Jssg implements JssgService {
         String date1 = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         String date2 = new SimpleDateFormat("yyyy/MM/dd").format(new Date());
         blogPost = blogPost.replace("DATE1", date1).replace("DATE2", date2);
-        FileUtils.writeStringToFile(new File(this.appConfig.postsPath() + "/" + date2 + "/" + date1 + "-Hello.mkd"), blogPost);
+        FileUtils.writeStringToFile(new File(this.appConfig.postsPath() + "/" + date1 + "-Hello.mkd"), blogPost);
     }
 
     public void generate(boolean backup) {
